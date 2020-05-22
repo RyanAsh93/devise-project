@@ -1,0 +1,15 @@
+<h1>Todos#index</h1>
+<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+<h2>Welcome <%= current_user.email %></h2>
+<hr />
+<%= link_to "Add to-do's", new_todo_path %>
+<h3>Your To-do's</h3>
+<ul>
+  <% @todos.each do |todo| %>
+    <li>
+      <%= todo.name %> - <%= todo.time %> 
+      <%= link_to "Edit", edit_todo_path(todo) %>
+      <%= link_to "Delete", todo, method: :delete %>
+    </li>
+  <% end %>
+</ul> 

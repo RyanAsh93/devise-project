@@ -1,0 +1,16 @@
+<h1>Add To-do's</h1>
+<%= form_with(model: @todo, local: true) do |f| %>
+  <br>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <br>
+  <%= f.label :time %>
+  <%= f.text_field :time %>
+  <br>
+
+  <br>
+  <%= f.submit %>
+<% end %>
+
